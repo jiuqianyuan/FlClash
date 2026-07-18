@@ -196,10 +196,10 @@ func updateConfig(params *UpdateParams) {
 		general.FindProcessMode = *params.FindProcessMode
 		tunnel.SetFindProcessMode(general.FindProcessMode)
 	}
-	if params.TCPConcurrent != nil {
-		general.TCPConcurrent = *params.TCPConcurrent
-		dialer.SetTcpConcurrent(general.TCPConcurrent)
-	}
+	// if params.TCPConcurrent != nil {
+	// 	general.TCPConcurrent = *params.TCPConcurrent
+	// 	dialer.SetTcpConcurrent(general.TCPConcurrent)
+	// }
 	if params.Interface != nil {
 		general.Interface = *params.Interface
 		dialer.DefaultInterface.Store(general.Interface)
